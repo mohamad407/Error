@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nasreen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Loading screen -->
+<div class="loader" id="loader">
+  <div class="loader-heart">💗</div>
+  <p class="loader-text">gathering stardust for Nasreen...</p>
+</div>
+
+<!-- Music control -->
+<button class="music-btn" id="musicBtn" aria-label="Toggle music">
+  <span id="musicIcon">🎵</span>
+</button>
+
+<!-- Side navigation dots -->
+<nav class="dot-nav" id="dotNav"></nav>
+
+<!-- ================= INTRO ================= -->
+<section class="screen intro-screen" id="intro" data-title="Intro">
+  <div class="stars-field" id="introStars"></div>
+  <p class="typewriter-line" id="typeLine"></p>
+  <div class="gift-wrap" id="giftWrap">
+    <div class="gift-box" id="giftBox">
+      <div class="gift-lid"></div>
+      <div class="gift-body"></div>
+      <div class="gift-ribbon-v"></div>
+      <div class="gift-ribbon-h"></div>
+      <div class="gift-bow">🎀</div>
+    </div>
+    <p class="gift-hint">tap the gift</p>
+  </div>
+</section>
+
+<!-- ================= PAGE 1 : HERO ================= -->
+<section class="screen hero-screen" id="page1" data-title="Hero">
+  <div class="aurora-bg"></div>
+  <canvas class="fireworks-canvas" id="fireworksCanvas1"></canvas>
+  <div class="floaters" id="floaters1"></div>
+  <h1 class="glow-title">🎉 Happy Birthday <span class="script-name">Nasreen</span> ❤️</h1>
+  <p class="hero-sub">a little magic, made just for you by your brother</p>
+  <button class="glow-btn" data-scroll-next>Start My Surprise</button>
+  <div class="scroll-cue">scroll ↓</div>
+</section>
+
+<!-- ================= PAGE 2 : JOURNEY ================= -->
+<section class="screen journey-screen" id="page2" data-title="Our Journey">
+  <h2 class="section-title reveal">Our Journey Together</h2>
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<!-- ================= PAGE 3 : GALLERY ================= -->
+<section class="screen gallery-screen" id="page3" data-title="Memories">
+  <h2 class="section-title reveal">Memory Gallery</h2>
+  <div class="gallery-grid" id="galleryGrid"></div>
+</section>
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-inner">
+    <div class="lightbox-art" id="lightboxArt"></div>
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+  </div>
+</div>
+
+<!-- ================= PAGE 4 : REASONS ================= -->
+<section class="screen reasons-screen" id="page4" data-title="20 Reasons">
+  <h2 class="section-title reveal">20 Reasons You're Amazing</h2>
+  <div class="reasons-grid" id="reasonsGrid"></div>
+</section>
+
+<!-- ================= PAGE 5 : GARDEN ================= -->
+<section class="screen garden-screen" id="page5" data-title="Magic Garden">
+  <h2 class="section-title reveal light">Magic Garden</h2>
+  <p class="garden-hint reveal">tap a flower for a wish</p>
+  <div class="garden-sky">
+    <div class="garden-birds" id="gardenBirds"></div>
+    <div class="garden-butterflies" id="gardenButterflies"></div>
+  </div>
+  <div class="garden-ground" id="gardenGround"></div>
+  <div class="wish-bubble" id="wishBubble"></div>
+</section>
+
+<!-- ================= PAGE 6 : LETTER ================= -->
+<section class="screen letter-screen" id="page6" data-title="A Letter">
+  <h2 class="section-title reveal">A Little Letter</h2>
+  <div class="notebook">
+    <div class="notebook-margin"></div>
+    <p class="letter-text" id="letterText"></p>
+    <p class="letter-sign">— Your Brother <span class="heartbeat">❤️</span></p>
+  </div>
+</section>
+
+<!-- ================= PAGE 7 : SIBLINGS ANIMATION ================= -->
+<section class="screen siblings-screen" id="page7" data-title="Brother & Sister">
+  <h2 class="section-title reveal">Some Things Never Change</h2>
+  <div class="stage" id="siblingStage">
+    <div class="ground-line"></div>
+    <div class="figure brother" id="brotherFig">🧑</div>
+    <div class="figure sister" id="sisterFig">👧</div>
+    <div class="gift-emoji" id="flowerEmoji">💐</div>
+    <div class="gift-emoji" id="presentEmoji">🎁</div>
+    <div class="stage-caption" id="stageCaption"></div>
+  </div>
+  <button class="glow-btn small" id="playSiblingBtn">Play the moment</button>
+</section>
+
+<!-- ================= PAGE 8 : WISH TREE ================= -->
+<section class="screen tree-screen" id="page8" data-title="Wish Tree">
+  <h2 class="section-title reveal light">The Wish Tree</h2>
+  <p class="garden-hint reveal light">tap a leaf to receive a wish</p>
+  <div class="tree-wrap">
+    <div class="tree-trunk"></div>
+    <div class="tree-canopy" id="treeCanopy"></div>
+    <div class="leaves-layer" id="leavesLayer"></div>
+  </div>
+  <div class="wish-bubble" id="treeWishBubble"></div>
+</section>
+
+<!-- ================= PAGE 9 : CAKE ================= -->
+<section class="screen cake-screen" id="page9" data-title="Make a Wish">
+  <h2 class="section-title reveal">Make a Wish</h2>
+  <div class="cake-wrap" id="cakeWrap">
+    <div class="smoke-layer" id="smokeLayer"></div>
+    <div class="candles" id="candles"></div>
+    <div class="cake-tier tier-top"></div>
+    <div class="cake-tier tier-bottom"></div>
+    <div class="cake-drip"></div>
+  </div>
+  <button class="glow-btn" id="blowBtn">Blow the Candles 🕯️</button>
+  <p class="cake-hint" id="cakeHint"></p>
+</section>
+
+<!-- ================= PAGE 10 : MEMORY SKY ================= -->
+<section class="screen sky-screen" id="page10" data-title="Memory Sky">
+  <h2 class="section-title reveal light">Memory Sky</h2>
+  <div class="moon"></div>
+  <div class="sky-stars" id="skyStars"></div>
+  <div class="wish-bubble" id="skyWishBubble"></div>
+</section>
+
+<!-- ================= PAGE 11 : TREASURE ================= -->
+<section class="screen treasure-screen" id="page11" data-title="Surprise">
+  <h2 class="section-title reveal light">One Last Surprise</h2>
+  <div class="chest-wrap" id="chestWrap">
+    <div class="chest-glow"></div>
+    <div class="chest-bottom"></div>
+    <div class="chest-lid" id="chestLid"></div>
+    <div class="chest-light" id="chestLight"></div>
+  </div>
+  <p class="chest-msg" id="chestMsg"></p>
+</section>
+
+<!-- ================= FINAL PAGE ================= -->
+<section class="screen final-screen" id="page12" data-title="Forever">
+  <div class="aurora-bg final-aurora"></div>
+  <div class="final-moon"></div>
+  <canvas class="fireworks-canvas" id="fireworksCanvas2"></canvas>
+  <div class="lanterns" id="lanterns"></div>
+  <h2 class="glow-title">Happy Birthday <span class="script-name">Nasreen</span> ❤️</h2>
+  <div class="final-letter">
+    <p>Dear Nasreen,</p>
+    <p>Thank you for always being my wonderful sister.</p>
+    <p>No matter how old we become, you will always have a special place in my heart.</p>
+    <p>May Allah bless you with happiness, success, peace, good health, and endless smiles.</p>
+    <p>Happy Birthday.</p>
+    <p class="final-love">Love You Forever ❤️</p>
+    <p class="final-from">— Your Brother</p>
+  </div>
+  <button class="glow-btn" id="replayBtn">Replay Journey ↻</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
